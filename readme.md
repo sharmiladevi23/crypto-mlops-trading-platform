@@ -84,7 +84,7 @@ flowchart LR
 docker build -t ml-trading-service ./services/base
 docker-compose up -d
 
-### 2) Configure environment
+2) Configure environment
 
 Copy and edit:
 
@@ -111,3 +111,4 @@ docker exec -it streamlit_app bash -lc "streamlit run streamlit_app.py --server.
 
 
 Open: http://localhost:8501
+
