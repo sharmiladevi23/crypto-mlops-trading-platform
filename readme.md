@@ -89,16 +89,16 @@ The Streamlit dashboard displays the latest model evaluation metrics:
 
 > Note: Classification metrics alone don’t guarantee trading profitability; the trading loop depends heavily on thresholds, fees, slippage, and market conditions.
 
-![Streamlit - candle streaming + model metrics](assets/streamlit_candles.png)
+![Streamlit - candle streaming + model metrics](streamlit_candles.png)
 
 ### Trading Simulation (paper trading)
 We simulate three strategies (Dynamic / Balanced / Ultra-Aggressive) using the model’s `signal` and `proba`.
 
 Example run (short window) shows the **portfolio value over time** and final balances:
 
-![Backtest - portfolio balance comparison](assets/training_backtest.png)
+![Backtest - portfolio balance comparison](training_backtest.png)
 
-![Strategies - balances + history](assets/strategy_balances.png)
+![Strategies - balances + history](strategy_balances.png)
 
 ---
 
@@ -140,5 +140,6 @@ docker exec -it streamlit_app bash -lc "streamlit run streamlit_app.py --server.
 
 
 Open: http://localhost:8501
+
 
 
