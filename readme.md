@@ -74,6 +74,35 @@ flowchart LR
 
 ---
 
+## 📊 Results & Demo
+
+> These results are from **paper-trading simulations** and a short evaluation window. Performance can vary significantly across different market regimes.  
+> This project is for **research/education** and does **not** place real orders. Not financial advice.
+
+### Model Metrics (latest run)
+The Streamlit dashboard displays the latest model evaluation metrics:
+
+- **Accuracy:** ~0.53  
+- **F1 Score:** ~0.40  
+- **Precision:** ~0.53  
+- **Recall:** ~0.32  
+
+> Note: Classification metrics alone don’t guarantee trading profitability; the trading loop depends heavily on thresholds, fees, slippage, and market conditions.
+
+![Streamlit - candle streaming + model metrics](assets/streamlit_candles.png)
+
+### Trading Simulation (paper trading)
+We simulate three strategies (Dynamic / Balanced / Ultra-Aggressive) using the model’s `signal` and `proba`.
+
+Example run (short window) shows the **portfolio value over time** and final balances:
+
+![Backtest - portfolio balance comparison](assets/training_backtest.png)
+
+![Strategies - balances + history](assets/strategy_balances.png)
+
+---
+
+
 ## Quickstart (local)
 
 ### 0) Prereqs
@@ -111,4 +140,5 @@ docker exec -it streamlit_app bash -lc "streamlit run streamlit_app.py --server.
 
 
 Open: http://localhost:8501
+
 
