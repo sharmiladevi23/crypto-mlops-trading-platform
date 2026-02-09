@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+.env
+
+# macOS
+.DS_Store
+
+# Data / artifacts
+data/
+*.duckdb
+*.db
+*.csv
+*.parquet
+models/
+*.pkl
+
+# Logs
+*.log
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Docker
+*.pid
