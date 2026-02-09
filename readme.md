@@ -1,4 +1,10 @@
-# Crypto MLOps Trading Platform (Kafka/Redpanda + DuckDB + LightGBM + Streamlit)
+# 📉 CryptoAlgorithmic: Event-Driven MLOps Trading Platform
+
+![Python](https://img.shields.io/badge/Python-3.9%2B-blue?logo=python&logoColor=white)
+![Docker](https://img.shields.io/badge/Container-Docker-2496ED?logo=docker&logoColor=white)
+![Redpanda](https://img.shields.io/badge/Streaming-Redpanda%2FKafka-orange)
+![DuckDB](https://img.shields.io/badge/OLAP-DuckDB-yellow)
+![Status](https://img.shields.io/badge/Status-Live_Paper_Trading-success)
 
 An end-to-end **MLOps + streaming** system for crypto signal generation and **paper trading**.
 
@@ -140,6 +146,7 @@ docker exec -it streamlit_app bash -lc "streamlit run streamlit_app.py --server.
 
 
 Open: http://localhost:8501
+
 
 
 
