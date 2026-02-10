@@ -149,9 +149,10 @@ docker exec -it streamlit_app bash -lc "streamlit run streamlit_app.py --server.
 Open: http://localhost:8501
 
 ## 🔮 Future Roadmap
-**Kubernetes Deployment:** Migrate from Docker Compose to Helm charts for scaling inference workers.
-**Feature Store Integration:** Replace DuckDB logic with Feast for more robust online/offline feature parity.
-**Risk Engine:** Implement a dedicated service for position sizing based on portfolio volatility (Kelly Criterion).
+**1. Kubernetes Deployment:** Migrate from Docker Compose to Helm charts for scaling inference workers.
+**2. Feature Store Integration:** Replace DuckDB logic with Feast for more robust online/offline feature parity.
+**3. Risk Engine:** Implement a dedicated service for position sizing based on portfolio volatility (Kelly Criterion).
+
 
 
 
