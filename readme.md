@@ -118,34 +118,40 @@ Example run (short window) shows the **portfolio value over time** and final bal
 ```bash
 docker build -t ml-trading-service ./services/base
 docker-compose up -d
+```
 
-2) Configure environment
+### 2) Configure environment
 
 Copy and edit:
 
 cp .env.example .env
 
-3) Backfill 30 days of history (build initial candles)
+### 3) Backfill 30 days of history (build initial candles)
 docker exec -it backfill bash -lc "python fetch_historical_trade_data.py && python load_historical_data_as_candles.py"
 
-4) Start realtime ingestion + stream processing
+### 4) Start realtime ingestion + stream processing
 docker exec -it realtime bash -lc "python fetch_realtime_data.py"
 docker exec -it candle_maker bash -lc "python candle_maker.py"
 
-5) Start prediction service (writes to DuckDB)
+### 5) Start prediction service (writes to DuckDB)
 docker exec -it predict bash -lc "python process_candle.py"
 
-6) Train the model (writes /data/models/latest.*)
+### 6) Train the model (writes /data/models/latest.*)
 docker exec -it train bash -lc "python train.py"
 
-7) Start paper trading bot
+### 7) Start paper trading bot
 docker exec -it trade_bot bash -lc "python trade_bot.py"
 
-8) Launch Streamlit
+### 8) Launch Streamlit
 docker exec -it streamlit_app bash -lc "streamlit run streamlit_app.py --server.port 8501 --server.address 0.0.0.0"
 
 
 Open: http://localhost:8501
+
+## 🔮 Future Roadmap
+**Kubernetes Deployment:** Migrate from Docker Compose to Helm charts for scaling inference workers.
+**Feature Store Integration:** Replace DuckDB logic with Feast for more robust online/offline feature parity.
+**Risk Engine:** Implement a dedicated service for position sizing based on portfolio volatility (Kelly Criterion).
 
 
 
